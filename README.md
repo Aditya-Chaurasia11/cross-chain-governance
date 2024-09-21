@@ -1,4 +1,5 @@
-# CrossChainVoting
+# Cross Chain Governance
+
 
 ## Overview
 
