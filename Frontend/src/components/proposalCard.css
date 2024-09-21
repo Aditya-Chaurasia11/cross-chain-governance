@@ -1,0 +1,94 @@
+.proposalCard_container {
+  width: 570px;
+  height: 300px;
+  border: 1px solid #30325a;
+  padding: 25px;
+  border-radius: 8px;
+  background-color: #202333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.proposalCard_container_upper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.proposalCard_container_upper h2 {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.proposalCard_container_upper p {
+  font-size: 18px;
+}
+
+.proposalCard_container_body {
+  margin-top: 30px;
+  color: #ccc4c4;
+  font-weight: 500;
+}
+
+.proposalCard_container_bottom {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.viewDetail {
+  border-radius: 8px;
+  border: 1px solid #6f76f6;
+  color: white;
+  padding: 0.4em 0.9em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-color: #6f76f6; */
+  font-size: 1em;
+  font-weight: 700;
+
+  font-family: inherit;
+
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.viewDetail:hover {
+  border-color: #646cff;
+  transition: scale 0.25s;
+  scale: 1.08;
+}
+.viewDetail:focus,
+.viewDetail:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.votenow {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.4em 0.9em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #6f76f6;
+  font-size: 1em;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  /* background-color: #1a1a1a; */
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.votenow:hover {
+  border-color: #646cff;
+  transition: scale 0.25s;
+  scale: 1.08;
+}
+.votenow:focus,
+.votenow:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

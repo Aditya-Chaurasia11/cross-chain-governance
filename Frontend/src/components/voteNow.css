@@ -1,0 +1,62 @@
+.voteNow_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.voteNow_title h2 {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "JetBrains Mono", monospace;
+  display: flex;
+}
+
+.voteNow_title p {
+  font-size: 18px;
+}
+
+.voteNow_desc {
+  margin-top: 10px;
+  font-size: 17px;
+  text-align: start;
+}
+
+.voteNow_time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  /* margin-bottom: 5px; */
+}
+
+.voteNow_time div {
+  padding: 8px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+  /* border: 1; */
+  cursor: pointer;
+}
+
+.accept_button_card {
+  border: 2px solid #6f76f6;
+  border-radius: 30px;
+  color: #6f76f6;
+}
+
+.reject_button_card {
+  border: 2px solid red;
+  border-radius: 30px;
+  color: red;
+}
+
+.accept_active {
+  background-color: #6f76f6;
+  color: white;
+}
+
+.reject_active {
+  background-color: red;
+  color: white;
+}

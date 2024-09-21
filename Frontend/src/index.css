@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1b1b25;
+}
+
+.createCollectionButton {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.5em 1.1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #6f76f6;
+  font-size: 1.15em;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  /* background-color: #1a1a1a; */
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.createCollectionButton:hover {
+  border-color: #646cff;
+  transition: scale 0.25s;
+  scale: 1.08;
+}
+.createCollectionButton:focus,
+.createCollectionButton:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
