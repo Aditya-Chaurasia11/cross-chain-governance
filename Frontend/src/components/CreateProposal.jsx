@@ -9,7 +9,6 @@ import DialogTitle from "@mui/material/DialogTitle";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useAccount, useSwitchChain, useWriteContract } from "wagmi";
-import { useEquito } from "@/components/providers/equito/equito-provider";
 import { chains } from "@/lib/chains.ts";
 import { getBlock, waitForTransactionReceipt } from "@wagmi/core";
 import { parseEventLogs } from "viem";
@@ -25,7 +24,6 @@ const CreateProposal = () => {
   const [iswait, setiswait] = useState(false);
   const [proposalTitle, setproposalTitle] = useState("");
   const [proposalDes, setproposalDes] = useState("");
-  const [propList, setPropList] = useState([]);
   const [days, setDays] = useState(Number);
   const [open, setOpen] = useState(false);
   const { writeContractAsync } = useWriteContract();
@@ -35,10 +33,6 @@ const CreateProposal = () => {
   const { switchChainAsync } = useSwitchChain();
 
   console.log("current chainId : ", chainId);
-  // console.log(GovernanceABI);
-
-  // const sepoliachain = chains.filter((chain)=>chain.definition.id == 11155111);
-  // console.log(sepoliachain);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -47,8 +41,6 @@ const CreateProposal = () => {
   const handleClose = () => {
     setOpen(false);
   };
-
-  // console.log("routerAbi", routerAbi);
 
   const sourceChain = chains.filter(
     (chain) => chain.definition.id == chainId
@@ -64,22 +56,8 @@ const CreateProposal = () => {
 
   console.log("getFee", getFee);
 
-  const printFieldValues = () => {
-    const data = {
-      title: proposalTitle,
-      des: proposalDes,
-      day: days,
-    };
-    // console.log(data);
-  };
-
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    printFieldValues();
-    // console.log(GovernanceABI);
-    // console.log(address, proposalDes, days);
-    // console.log(chain);
-    // console.log(chainId);
 
     console.log("sourcechain", sourceChain);
 
@@ -105,8 +83,7 @@ const CreateProposal = () => {
         (chain) => chain.definition.id == 11155111
       )[0];
 
-      // console.log(sourceChain);
-      // console.log(sepoliachain);
+      
 
       if (sourceChain?.definition.id === sepoliachain?.definition.id) {
         toast.info(`Proposal created successfully`, {

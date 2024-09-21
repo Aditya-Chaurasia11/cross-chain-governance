@@ -37,16 +37,6 @@ export default function Navbar() {
       </div>
 
       <div className="gpt3__navbar-sign">
-        {/* <NavLink
-          to="/add-collateral"
-          className={({ isActive }) =>
-            isActive
-              ? "active-link hover:underline"
-              : "inactive-link  hover:underline"
-          }
-        >
-          Add Collateral
-        </NavLink> */}
         <button className="navbar_mint_nft" onClick={handleclick}>
           Mint NFT
         </button>

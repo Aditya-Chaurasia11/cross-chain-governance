@@ -7,9 +7,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./voteNow.css";
-import TextField from "@mui/material/TextField";
 import { useAccount, useSwitchChain, useWriteContract } from "wagmi";
-import { useEquito } from "@/components/providers/equito/equito-provider";
 import { chains } from "@/lib/chains.ts";
 import { getBlock, waitForTransactionReceipt } from "@wagmi/core";
 import { parseEventLogs } from "viem";
@@ -27,14 +25,7 @@ import { Chip } from "@mui/material";
 
 const VoteNow = ({ name, data }) => {
   const [isUploading, setIsUploading] = useState(false);
-  const [videoName, setVideoName] = useState("");
-  const [videoDesc, setVideoDesc] = useState("");
   const [accept, setAccept] = useState();
-  const [iswait, setiswait] = useState(false);
-  const [proposalTitle, setproposalTitle] = useState("");
-  const [proposalDes, setproposalDes] = useState("");
-  const [propList, setPropList] = useState([]);
-  const [days, setDays] = useState(Number);
   const [open, setOpen] = useState(false);
   const { writeContractAsync } = useWriteContract();
   const { address } = useAccount();
@@ -53,11 +44,6 @@ const VoteNow = ({ name, data }) => {
   };
 
   console.log(data);
-
-  const printFieldValues = () => {
-    console.log("Video Name:", videoName);
-    console.log("Description:", videoDesc);
-  };
 
   const sourceChain = chains.filter(
     (chain) => chain.definition.id == chainId
@@ -93,7 +79,6 @@ const VoteNow = ({ name, data }) => {
       return;
     }
 
-    printFieldValues();
     console.log("sourcechain", sourceChain);
 
     console.log("data", {
@@ -238,7 +223,7 @@ const VoteNow = ({ name, data }) => {
         <form onSubmit={handleFormSubmit}>
           <DialogTitle>
             <div className="voteNow_title">
-              <h2>Proposal - {Number(data?.id) }</h2>
+              <h2>Proposal - {Number(data?.id)}</h2>
               <p>
                 {data?.deadline > Math.floor(Date.now() / 1000) ? (
                   <TimeLeft unixTimestamp={data?.deadline} />

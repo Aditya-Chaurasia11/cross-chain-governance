@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./proposalCard.css";
 import VoteNow from "./VoteNow";
 import TimeLeft from "./TimeLeft";
@@ -9,7 +9,7 @@ const ProposalCard = ({ data }) => {
   return (
     <div className="proposalCard_container">
       <div className="proposalCard_container_upper">
-        <h2>Proposal - {Number(data?.id) }</h2>
+        <h2>Proposal - {Number(data?.id)}</h2>
         {data?.deadline > Math.floor(Date.now() / 1000) ? (
           <TimeLeft unixTimestamp={data?.deadline} />
         ) : (

@@ -1,21 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CreateProposal from "../components/CreateProposal";
 import "./proposalPage.css";
 import ProposalCard from "../components/ProposalCard";
-import ChainSelect from "@/components/chain-select";
-import { useEquito } from "@/components/providers/equito/equito-provider";
-// import "./addCollateral.css";
-import { formatUnits, parseEther, parseEventLogs, parseUnits } from "viem";
-import { useReadContract, useWriteContract, useAccount } from "wagmi";
-import GoveranceABI from "../abi/GoveranceABI";
+import { useReadContract, useAccount } from "wagmi";
 import { config } from "@/lib/wagmi";
 import { getChainId } from "@wagmi/core";
 import GovernanceABI from "@/abi/GoveranceABI.jsx";
 
-// import "./proposalPage.css";
-
 const ProposalPage = () => {
-  const [proList, setproList] = useState([]);
   const { address } = useAccount();
   console.log(address);
   const chainId = getChainId(config);
@@ -29,9 +21,7 @@ const ProposalPage = () => {
   });
 
   console.log("getAllProposals", proposal);
-  // setproList(proposal);
 
-  // const handleGallerynavigation = () => {};
   return (
     <div className="proposalPage_container">
       <div className="proposalPage_container_upper">
@@ -45,17 +35,10 @@ const ProposalPage = () => {
             {proposal?.map((k) => (
               <ProposalCard data={k} />
             ))}
-           
           </div>
         ) : (
           <div className="proposalPage_container_lower_card">
             <h3>No proposal yet. Click on Create Proposal to create new.</h3>
-            {/* <button
-                className="proposalPage_container_lower_card_button"
-                onClick={handleGallerynavigation}
-              >
-                Create new
-              </button> */}
           </div>
         )}
       </div>
