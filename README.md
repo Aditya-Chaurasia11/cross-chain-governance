@@ -14,7 +14,7 @@ Check out: [Visit Here]()
 - **Proposal Creation**: Users can submit proposals across supported chains, allowing for decentralized governance.
 - **Real-Time Vote Tallying**: The votes from all chains are collected and tallied in real-time to ensure accurate results.
 - **Security Focused**: The platform ensures the integrity of the voting process through transparent, on-chain records of all votes.
-- **Multi-Chain Support**: Supports governance operations across chains like Ethereum, Polygon, and BNB Smart Chain.
+- **Multi-Chain Support**: Supports governance operations across chains like Ethereum, and Polygon.
 
 ## Important Parameters
 
@@ -22,7 +22,6 @@ Check out: [Visit Here]()
 - **Delegation Ratio**: Users can delegate up to **100%** of their voting power to another user or entity.
 - **Proposal Creation**: A minimum token amount is required to submit a proposal, to prevent spam.
 - **Voting Period**: Each governance proposal has a set period during which users can cast their votes.
-- **Fees**: **0.5%** fee is charged for proposal creation to ensure meaningful submissions.
 
 ---
 
