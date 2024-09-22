@@ -14,7 +14,7 @@ const ProposalPage = () => {
   console.log(chainId);
 
   const { data: proposal } = useReadContract({
-    address: "0x0dC6e902e9c30755609d898b7B859b2DCd64457F",
+    address: "0x259C0006d10946347B7e64D3dBEDe83c0FB48A9e",
     abi: GovernanceABI,
     functionName: "getAllProposals",
     chainId: 11155111,
