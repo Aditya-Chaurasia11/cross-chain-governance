@@ -9,7 +9,7 @@ Check out: [Visit Here](https://cross-chain-governance.vercel.app/)
 
 ## Key Features
 
-- **Cross-Chain Voting**: Users can vote on governance proposals across multiple blockchain networks.
+- **Cross Chain Governance**: Users can vote on governance proposals across multiple blockchain networks.
 - **Delegated Voting**: Users can delegate their voting power to trusted representatives to vote on their behalf.
 - **Proposal Creation**: Users can submit proposals across supported chains, allowing for decentralized governance.
 - **Real-Time Vote Tallying**: The votes from all chains are collected and tallied in real-time to ensure accurate results.
